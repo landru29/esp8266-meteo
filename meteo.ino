@@ -3,7 +3,6 @@
 #include "temperature.h"
 #include "wifi_connect.h"
 #include "meteo_server.h"
-#include "serial_display.h"
 
 
 Pressure pressure;
@@ -33,13 +32,6 @@ void setup() {
 }
   
 void loop() {
-  /*delay(2000);
-  
-  pressure.read();
-  humidity.read();
-  temperature.read();
-
-  serialDisplay(pressure, humidity, temperature);*/
   server.run();
 
 }
