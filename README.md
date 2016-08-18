@@ -48,6 +48,6 @@ You will get a json object
     "ds-temperature": "20.36"
     "bmp-pressure": "10240"
     "dht-humidity": "19.60"
-    "dht-headt-index": "22.10"
+    "dht-heat-index": "22.10"
 }
 ````

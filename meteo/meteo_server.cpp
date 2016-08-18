@@ -20,7 +20,7 @@ void MeteoServer::handleRoot() {
   MeteoServer::pressure->read();
   MeteoServer::humidity->read();
   MeteoServer::temperature->read();
-  
+
   String content = "{";
 
   content += String("\"bmp-temperature\":\"") + String(MeteoServer::pressure->temperature) + String("\",");
@@ -28,14 +28,13 @@ void MeteoServer::handleRoot() {
   content += String("\"ds-temperature\":\"") + String(MeteoServer::temperature->temperature) + String("\",");
   content += String("\"bmp-pressure\":\"") + String(MeteoServer::pressure->pressure) + String("\",");
   content += String("\"dht-humidity\":\"") + String(MeteoServer::humidity->humidity) + String("\",");
-  content += String("\"dht-headt-index\":\"") + String(MeteoServer::humidity->heatIndex) + String("\"");
+  content += String("\"dht-heat-index\":\"") + String(MeteoServer::humidity->heatIndex) + String("\"");
 
   content += "}";
-  
-  _server_.send(200, "application/json", content); 
+
+  _server_.send(200, "application/json", content);
 }
 
 void MeteoServer::run() {
   _server_.handleClient();
 }
-
