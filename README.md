@@ -3,6 +3,7 @@
 This is a cheap meteo station, on your local wifi network
 
 ## Features
+
 This meteo station embed :
 * Temperature sensor **DS18B20**
 * Humidity sensor **DHT22**
@@ -10,7 +11,18 @@ This meteo station embed :
 * Wifi chip **ESP8266** (Wemos D1 mini)
 
 ## Schematic
+
 ![Meteo Station](sch/schematic.png?raw=true)
+
+## PCB
+
+### Top copper
+
+![Top copper](pcb/meteo_etch_copper_top.png?raw=true)
+
+### Bottom copper
+
+![bottom copper](pcb/meteo_etch_copper_bottom.png?raw=true)
 
 ## How to use
 
@@ -25,6 +37,7 @@ The meteo station support WPS connection. After power on, the LED will:
 * switch off: *The meteo station is ready*
 
 ### Get meteo data
+
 Send an HTTP GET request: http://meteo_by_noopy/
 
 You will get a json object
